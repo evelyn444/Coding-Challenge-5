@@ -76,3 +76,13 @@ function completeOrder (customerName){
     } // logs if an order has been completed or not 
 }
 completeOrder ('Katie Jones');
+
+//Task 6: Create a Function to Check Pending Orders
+function checkingPendingOrders()
+{ 
+    orders.forEach(order => {
+        if (order.status === 'Pending') {
+            console.log (`Pending Order for ${customerName}`);
+        }
+    });
+} checkingPendingOrders(); //checking pending orders
