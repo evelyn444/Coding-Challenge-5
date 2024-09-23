@@ -63,3 +63,16 @@ function calculateOrderTotal (order){
 }
 let total = calculateOrderTotal (orders[0], inventory);
 console.log ("The total cost is: $" + total); //calculates order total
+
+// Task 5: Create a Function to Mark an Order as Completed
+
+function completeOrder (customerName){
+    const order = orders.find (ord => ord.customerName === customerName);
+    if (order) {
+        order.status = 'Completed';
+        console.log (`Order has been completed for ${customerName}`);
+    } else {
+        console.log (`Error: No order for ${customerName}`);
+    } // logs if an order has been completed or not 
+}
+completeOrder ('Katie Jones');
