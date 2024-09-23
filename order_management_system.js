@@ -4,4 +4,7 @@ const inventory = [
     {name: 'Capuccino', price: 12, quantity: 120},
     {name: 'Espresso', price: 7, quantity: 200},
     {name: 'Americano', price: 10, quantity: 115},
-];
+]; 
+
+//Task 2: Create an Orders Array of Order Objects
+const orders = []; //empty array
