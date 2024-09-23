@@ -44,3 +44,22 @@ placeOrder( 'Katie Jones', [{name: 'Latte', quantity: 1}]);
 placeOrder('Sarah Miller', [{ name: 'Americano', quantity: 4}]);
 }
 
+//Task 4: Create a Function to Calculate Total for an Order
+function calculateOrderTotal (order){
+    let total = 0;
+    for (let i=0; i < order.items.length; i++){
+        let itemOrdered = order.items[i];
+
+        for (let i = 0; i < inventory.length; i++){
+            let inventoryItem = inventory[i];
+
+            if (inventoryItem.name === itemOrdered.name){
+                total += inventoryItem.price * itemOrdered.quantity;
+            }
+        }
+
+    }
+    return total;
+}
+let total = calculateOrderTotal (orders[0], inventory);
+console.log ("The total cost is: $" + total); //calculates order total
